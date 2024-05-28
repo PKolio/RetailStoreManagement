@@ -1,0 +1,439 @@
+{
+	"info": {
+		"_postman_id": "b29c5116-f872-45c3-af04-b2e678c4f627",
+		"name": "Retail Store API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15785456"
+	},
+	"item": [
+		{
+			"name": "GET All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Customer by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/Customers/:id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"Customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "",
+							"description": "Put the id you are searching for here."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Product by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/Products/:id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"Products",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1",
+							"description": "Put the id you are searching for here."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Purchases",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/purchases",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"purchases"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Purchase by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/purchases/:id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"purchases",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "",
+							"description": "The id starts from 1006."
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Customer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": 0,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7163/api/customers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productId\": 1,\r\n  \"name\": \"New Product\",\r\n  \"price\": 0,\r\n  \"stock\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7163/api/products",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"purchaseDate\": \"2024-05-25T16:41:23.213Z\",\r\n  \"customerId\": 1,\r\n  \"purchaseProducts\": [\r\n    {\r\n      \"productId\": 1\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7163/api/purchases",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"purchases"
+					],
+					"query": [
+						{
+							"key": "purchaseId",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "purchaseDate",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "customerId",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "customer",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Customer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/customers/:id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/products/:id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"products",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Purchase",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7163/api/purchases/:id",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"purchases",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Product by id",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"productId\": 5,\r\n        \"name\": \"Motherboard\",\r\n        \"price\": 15.00,\r\n        \"stock\": 40\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7163/api/products/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"products",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Purchase by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"purchaseId\": 0,\r\n  \"purchaseDate\": \"2024-05-27T21:39:16.106Z\",\r\n  \"customerId\": 0,\r\n  \"productId\": 0,\r\n  \"quantity\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7163/api/purchases/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"purchases",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Customer by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"customerId\": 0,\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"email\": \"string\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7163/api/customers/{id}",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7163",
+					"path": [
+						"api",
+						"customers",
+						"{id}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
